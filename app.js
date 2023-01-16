@@ -1,32 +1,19 @@
-const { readFile, writeFile } = require('fs');
+const http = require('http');
 
-readFile('./content/first.txt', 'utf8', (err, result) => {
-    if (err) {
-        console.log(err);
-        return err;
+const server = http.createServer((req, res) => {
+    if (req.url === '/') {
+        res.end('welcome to our home page');
     }
 
-    console.log(result);
+    if (req.url === '/about') {
+        res.end('Here is our short story');
+    }
 
-    const first = result;
-
-    readFile('./content/second.txt', 'utf8', (err, result) => {
-        if (err) {
-            console.log(err);
-            return err;
-        }
-
-        const second = result;
-
-        writeFile(
-            './content/result-async.txt',
-            `Here is the result : ${first}, ${second}`,
-            (err, result) => {
-                if (err) {
-                    console.log(err);
-                    return err;
-                }
-            }
-        );
-    });
+    res.end(`
+        <h1>Oops!</h1>
+        <p>we can't find the page you're looking for<p>
+        <a href="/">back home</a>
+    `);
 });
+
+server.listen(5000);
