@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/kushal-kamra/node-practice-tutorial#readme",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "net": "^1.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
