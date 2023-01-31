@@ -6,3 +6,5 @@ socket.on('message', (msg, rinfo) => {
 });
 
 socket.bind(8081);
+
+// echo "hi" | nc -W1 -u 127.0.0.1 8081
