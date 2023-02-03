@@ -21,7 +21,8 @@
   "dependencies": {
     "dgram": "^1.0.1",
     "lodash": "^4.17.21",
-    "net": "^1.0.2"
+    "net": "^1.0.2",
+    "simple-xmpp": "^2.3.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
