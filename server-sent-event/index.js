@@ -24,3 +24,6 @@ console.log(`Listening on ${port}`);
 // Run below in browser console to establish connection
 // let sse = new EventSource("http://localhost:8080/stream");
 // sse.onmessage = console.log;
+
+// Run below to execute loadbalancer
+// haproxy -f server-sent-event/sse-load-balancing.cfg
